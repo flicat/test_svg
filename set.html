@@ -3,23 +3,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>path</title>
+    <title>set</title>
     <style type="text/css">
         body, html {
             padding: 0;
             margin: 0;
         }
-        path {
-            fill: #fff;
-            stroke: #000;
-            stroke-width: 2;
+        circle {
+            fill: #0af
         }
     </style>
 </head>
 <body>
-<svg width="1000" height="800">
-    <path d="M100 100 L200 200 L100 300 Z"></path>
-    <path d="M 100 100 L 300 100 L 200 300 z"></path>
+<svg width="1000" height="600">
+    <circle cx="50%" cy="50%" r="25">
+        <set attributeName="r" attributeType="XML" to="100" begin="3s" />
+    </circle>
 </svg>
 </body>
 </html>

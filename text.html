@@ -24,7 +24,8 @@
 <svg width="1000" height="800">
     <text x="50" y="100" transform="rotate(45 50,100)">FLICAT</text>
     <defs>
-        <path id="path1" d="M75,20 a1,1 0 0,0 100,0" />
+        <path id="path1" d="M200,100 a1,1 0 0,0 100,0" />
+        <path id="path2" d="M100,400 c 50,0 50,100 100,100 50,0 50,-100 100,-100"></path>
     </defs>
     <text x="10" y="100">
         <textPath xlink:href="#path1">FLICAT FLICAT FLICAT FLICAT</textPath>
@@ -34,7 +35,9 @@
         <tspan x="100" y="350">Second line</tspan>
     </text>
     <a xlink:href="https://github.com/flicat" target="_blank">
-        <text x="100" y="200" fill="red">FLICAT</text>
+        <text x="100" y="200">
+            <textpath xlink:href="#path2">FLICAT FLICAT FLICAT FLICAT FLICAT</textpath>
+        </text>
     </a>
 </svg>
 </body>

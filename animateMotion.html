@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>animateColor</title>
+    <style type="text/css">
+        body, html {
+            padding: 0;
+            margin: 0;
+        }
+        path {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 2;
+        }
+        circle {
+            fill: #ccc;
+        }
+        circle:last-child {
+            fill: #f00;
+        }
+    </style>
+</head>
+<body>
+<svg width="1000" height="1000">
+    <path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110" id="theMotionPath"/>
+    <circle cx="10" cy="110" r="3" />
+    <circle cx="110" cy="10" r="3" />
+
+    <!-- Here is a red circle which will be moved along the motion path. -->
+    <circle cx="" cy="" r="5">
+        <!-- Define the motion path animation -->
+        <animateMotion dur="2s" repeatCount="indefinite">
+            <mpath xlink:href="#theMotionPath"/>
+        </animateMotion>
+    </circle>
+</svg>
+</body>
+</html>
