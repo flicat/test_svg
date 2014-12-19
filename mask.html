@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>mask</title>
+    <style type="text/css">
+        body, html {
+            padding: 0;
+            margin: 0;
+            background-color: #999;
+        }
+        defs mask rect {
+            fill: #fff;
+        }
+        defs text {
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .use_1 {
+            fill: #fff;
+        }
+        .use_2 {
+            fill: #000;
+        }
+    </style>
+</head>
+<body>
+<svg width="1000" height="800">
+    <defs>
+        <mask id="myMask" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="80">
+            <rect x="0" y="0" width="100" height="80"/>
+        </mask>
+        <text id="Text" x="100" y="48" text-anchor="middle">
+            Black & White
+        </text>
+    </defs>
+    <use class="use_1" xlink:href="#Text" x="100" y="200" />
+    <use class="use_2" xlink:href="#Text" x="100" y="200" mask="url(#myMask)"/>
+</svg>
+</body>
+</html>

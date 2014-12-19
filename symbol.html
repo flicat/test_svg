@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>symbol</title>
+    <style type="text/css">
+        body, html {
+            padding: 0;
+            margin: 0;
+        }
+        circle {
+            fill: #fff;
+            stroke: #6f6;
+            stroke-width: 5;
+        }
+    </style>
+</head>
+<body>
+<svg width="1000" height="800">
+    <symbol id="symbol">
+        <circle cx="100" cy="100" r="50"/>
+        <circle cx="150" cy="100" r="50"/>
+    </symbol>
+
+    <use xlink:href="#symbol" x="100" y="200" />
+    <use xlink:href="#symbol" x="200" y="300"  />
+    <use xlink:href="#symbol" x="300" y="400"  />
+</svg>
+</body>
+</html>

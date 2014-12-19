@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>use</title>
+    <style type="text/css">
+        body, html {
+            padding: 0;
+            margin: 0;
+        }
+        text {
+            fill: #99f;
+        }
+        circle {
+            fill: #f66
+        }
+    </style>
+</head>
+<body>
+<svg width="1000" height="800">
+    <defs>
+        <text id="text" x="0" y="0">FLICAT</text>
+        <circle id="circle" cx="0" cy="0" r="50"/>
+    </defs>
+    <use xlink:href="#text" x="100" y="200" />
+    <use xlink:href="#circle" x="100" y="300" />
+</svg>
+</body>
+</html>
