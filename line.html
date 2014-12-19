@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>rect</title>
+    <style type="text/css">
+        body, html {
+            padding: 0;
+            margin: 0;
+        }
+        line {
+            stroke :#000;
+            stroke-width: 3;
+        }
+        circle {
+            stroke: #f0f;
+            stroke-width: 3;
+            fill: #fff;
+        }
+        svg:hover circle {
+            stroke: #0f0;
+            stroke-width: 5;
+        }
+        svg:hover line {
+            stroke-width: 5;
+        }
+    </style>
+</head>
+<body>
+<svg width="600" height="400">
+    <line x1="100" y1="50" x2="300" y2="300"/>
+    <line x1="300" y1="300" x2="500" y2="200" />
+    <a href="#"><circle cx="300" cy="300" r="5"/></a>
+</svg>
+</body>
+</html>

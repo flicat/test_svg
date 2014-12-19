@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>text</title>
+    <style type="text/css">
+        body, html {
+            padding: 0;
+            margin: 0;
+        }
+        text {
+            fill: #5f50ff;
+        }
+        a text {
+            fill: #00f;
+        }
+        a:hover text {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<svg width="1000" height="800">
+    <text x="50" y="100" transform="rotate(45 50,100)">FLICAT</text>
+    <defs>
+        <path id="path1" d="M75,20 a1,1 0 0,0 100,0" />
+    </defs>
+    <text x="10" y="100">
+        <textPath xlink:href="#path1">FLICAT FLICAT FLICAT FLICAT</textPath>
+    </text>
+    <text x="100" y="300">Several lines:
+        <tspan x="100" y="325">First line</tspan>
+        <tspan x="100" y="350">Second line</tspan>
+    </text>
+    <a xlink:href="https://github.com/flicat" target="_blank">
+        <text x="100" y="200" fill="red">FLICAT</text>
+    </a>
+</svg>
+</body>
+</html>

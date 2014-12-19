@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>polyline</title>
+    <style type="text/css">
+        body, html {
+            padding: 0;
+            margin: 0;
+        }
+        polyline {
+            fill: #fff;
+            stroke: #000;
+            stroke-width: 2;
+        }
+        polyline:nth-child(2) {
+            transform: translate(0, 500px);
+        }
+        polyline:nth-child(3) {
+            transform: translate(80px, 420px);
+        }
+        polyline:nth-child(4) {
+            transform: translate(160px, 340px);
+        }
+        polyline:nth-child(5) {
+            transform: translate(240px, 260px);
+        }
+    </style>
+</head>
+<body>
+<svg width="1000" height="1000">
+    <polyline points="100,50 200,50 250,100 400,100 450,50 550,50"></polyline>
+    <polyline points="20,100 40,60 70,80 100,20" />
+    <polyline points="20,100 40,60 70,80 100,20" />
+    <polyline points="20,100 40,60 70,80 100,20" />
+    <polyline points="20,100 40,60 70,80 100,20" />
+</svg>
+</body>
+</html>
