@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>pattern</title>
+    <style type="text/css">
+        body, html {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<svg width="1000" height="800">
+    <defs>
+        <pattern id="pattern_1" width="10" height="10" patternUnits="userSpaceOnUse">
+            <polygon points="5,0 10,10 0,10"/>
+        </pattern>
+        <pattern id="pattern_2" width="80" height="120" patternUnits="userSpaceOnUse">
+            <polygon points="40,0 80,20 80,60 40,80 0,60 0,20" stroke="#000" stroke-width="2" fill="none"/>
+            <line x1="40" y1="80" x2="40" y2="120" stroke="#000" stroke-width="2" fill="none"></line>
+        </pattern>
+    </defs>
+    <!--<polygon points="120,40 200,80 200,160 120,200 40,160 40,80" fill="url(#pattern_1)" />-->
+    <rect x="0" y="0" width="1000" height="800" fill="url(#pattern_2)"></rect>
+</svg>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>glyph</title>
+    <title>missing-glyph</title>
     <style type="text/css">
         body, html {
             padding: 0;
@@ -12,12 +12,7 @@
         text {
             font-weight: bold;
             font-style: normal;
-        }
-        .text_1 {
             font-family: 'Super Sans', Helvetica, sans-serif;
-        }
-        .text_2 {
-            font-family: 'my font test', Helvetica, sans-serif;
         }
     </style>
 </head>
@@ -25,19 +20,18 @@
 <svg width="1000" height="800">
     <defs>
         <font id="Font1" horiz-adv-x="1000">
-            <font-face font-family="Super Sans" />
+            <font-face font-family="Super Sans">
+                <font-face-src>
+                    <font-face-name name="Super Sans Bold"/>
+                </font-face-src>
+            </font-face>
+            <missing-glyph><path d="M0,0h200v200h-200z"/></missing-glyph>
             <glyph unicode="!" horiz-adv-x="800" d="M0,0h200v200h-200z"></glyph>
             <glyph unicode="@" d="M0,50l100,300l400,100z"></glyph>
             <glyph unicode="#" d="M0,200l0,800l800,400z"></glyph>
-            <glyph unicode="?" d="M600,200l1000,400l1000,800l600,1000l200,800l200,400"></glyph>
-        </font>
-        <font id="Font2" horiz-adv-x="1000">
-            <font-face font-family="my font test" />
-            <glyph unicode="@" d="M60,20l100,40l100,80l60,100l20,80l20,40"></glyph>
         </font>
     </defs>
-    <text class="text_1" x="100" y="100" style="">Text using embe@dded font! # ?</text>
-    <text class="text_2" x="100" y="300" style="">Text using embe@dded font!</text>
+    <text x="100" y="100" style="">Text using embe@dded font! #</text>
 </svg>
 </body>
 </html>
