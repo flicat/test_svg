@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>feColorMatrix</title>
+    <style type="text/css">
+        body, html {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<svg width="1000" height="1000">
+    <filter id="svg_blur">
+        <feColorMatrix in="SourceGraphic" type="saturate" values="0"/>
+    </filter>
+    <image width="540" height="960" x="100" y="0" xlink:href="images/jinianbeigu_4.png" filter="url(#svg_blur)">
+        <title>该滤镜基于转换矩阵对颜色进行变换。每一像素的颜色值(一个表示为[红,绿,蓝,透明度] 的向量) 都做矩阵乘法 (matrix multiplated) 以创建新的颜色.</title>
+    </image>
+</svg>
+</body>
+</html>
