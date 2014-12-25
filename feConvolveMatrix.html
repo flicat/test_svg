@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>feComponentTransfer</title>
+    <title>feConvolveMatrix</title>
     <style type="text/css">
         body, html {
             padding: 0;
@@ -12,13 +12,9 @@
     </style>
 </head>
 <body>
-<svg width="1000" height="1000">
+<svg width="1000" height="800">
     <filter id="svg_blur">
-        <feComponentTransfer>
-            <feFuncR type="gamma" offset="0" amplitude="1" exponent="4.84"/>
-            <feFuncG type="gamma" offset="0" amplitude="1" exponent="4.84"/>
-            <feFuncB type="gamma" offset="0" amplitude="1" exponent="4.84"/>
-        </feComponentTransfer>
+        <feConvolveMatrix in='image1' order="3 3" targetX="0" targetY="0" edgeMode="duplicate" kernelMatrix="1 2 3 2 3 4 3 4 5" preserveAlpha='false'/>
     </filter>
     <image width="540" height="960" x="100" y="0" xlink:href="images/jinianbeigu_4.png" filter="url(#svg_blur)"/>
 </svg>
